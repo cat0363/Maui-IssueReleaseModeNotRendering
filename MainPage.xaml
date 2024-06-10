@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Maui_IssueReleaseModeNotRendering"
+             x:Class="Maui_IssueReleaseModeNotRendering.MainPage" x:DataType="local:ViewModelMainPage">
+
+    <Grid BindingContext="{Binding EmployeeList}">
+        <StackLayout Orientation="Vertical" Spacing="0" VerticalOptions="Start" BindableLayout.ItemsSource="{Binding .}">
+            <BindableLayout.ItemTemplate>
+                <DataTemplate x:DataType="local:ViewModelEmployee">
+                    <Grid ColumnDefinitions="Auto,Auto,Auto" ColumnSpacing="5">
+                        <Label Grid.Column="0" FontSize="14" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Start" Text="{Binding EmployeeName}" />
+                        <Label Grid.Column="1" FontSize="14" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Start" Text="{Binding EmployeeAge}" />
+                        <Label Grid.Column="2" FontSize="14" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Start" Text="{Binding EmployeeSex}" />
+                    </Grid>
+                </DataTemplate>
+            </BindableLayout.ItemTemplate>
+        </StackLayout>
+    </Grid>
+
+</ContentPage>
